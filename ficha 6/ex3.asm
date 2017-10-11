@@ -12,14 +12,13 @@ ROT_X PROC USES EDI EBX AP1:ptr BYTE , Cval :BYTE , N: DWORD
 	MOV ECX , N
 	CLD
 	MOV EBX , 0
-@@: REPNE SCASB ; compara o valor de al com [edi]
+@@: 	REPNE SCASB ; compara o valor de al com [edi]
 	JECXZ @F
 	INC EBX
 	JMP @B
-@@: JNE @F
+@@: 	JNE @F
 	INC EBX
-@@: 
-	MOV EAX , EBX
+@@: 	MOV EAX , EBX
 	RET
 ROT_X ENDP
 
@@ -28,5 +27,4 @@ main proc c
 	invoke printf, offset msg, eax
 	invoke ExitProcess, 0
 main endp
-
 end
