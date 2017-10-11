@@ -12,7 +12,7 @@ afunc4 PROC pixels: ptr byte, largura: sdword, altura:sdword
 	mov ecx, eax
 	mov edi, pixels
 
-	;; alterar a cor do 1บ pixel para vermelho
+	;; alterar a cor do 1ยบ pixel para vermelho
 	mov byte ptr [edi], 0
 	mov byte ptr [edi+1], 0
 	mov byte ptr [edi+2], 255
@@ -26,9 +26,7 @@ afunc4 PROC pixels: ptr byte, largura: sdword, altura:sdword
 	mov byte ptr [edi+1], 0
 	mov byte ptr [edi+2], 255
 	mov byte ptr [edi+3], 255
-fim:
-	ret
-
+	
+fim:	ret
 afunc4 ENDP
-
 END
