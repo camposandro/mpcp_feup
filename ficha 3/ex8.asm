@@ -16,8 +16,7 @@ main PROC C
 	mov MIN, AX ;; correspondente ao 1o elem da seq
 
 	dec ecx ; num de iteracoes = lengthof seq - 1 
-CICLO:
-	jecxz FIM
+CICLO:	jecxz FIM
 	add esi, 2
 	mov AX, [esi]
 	cmp AX, MAX ; compara com max
@@ -37,11 +36,9 @@ NOVOMIN:
 	mov MIN, AX
 	jmp CICLO
 
-FIM: 
-	invoke printf, offset max, MAX
+FIM: 	invoke printf, offset max, MAX
 	invoke printf, offset min, MIN
 	;invoke_getch
 	invoke ExitProcess, 0
-
 main ENDP
 end
