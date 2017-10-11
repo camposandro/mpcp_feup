@@ -18,5 +18,4 @@ main proc c
 	invoke printf, offset linha
 	invoke ExitProcess, 0
 main endp
-
 end
