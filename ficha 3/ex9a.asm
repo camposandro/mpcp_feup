@@ -22,14 +22,12 @@ main PROC C
 	cmp AL, AH
 	jbe FIM
 
-TRUE: 
-	inc ecx
+TRUE: 	inc ecx
 	jmp FIM
 
-FIM:  ;; fim == false
+FIM:  	;; fim == false
 	invoke printf, offset msg, ecx
 	; invoke_getch
 	invoke ExitProcess, 0
-	
 main ENDP
 end
