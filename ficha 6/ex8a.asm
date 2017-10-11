@@ -28,5 +28,4 @@ main proc c
 	invoke hist, offset texto, offset vector
 	invoke ExitProcess, 0
 main endp
-
 end
