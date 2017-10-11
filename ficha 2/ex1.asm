@@ -6,7 +6,6 @@ msg BYTE "Contador: %d", 13, 10, 0
 
 .code
 main PROC C
-	;; escrever codigo (parte principal)
 	mov edi, offset seq
 	mov eax, 0
 ciclo:	mov ecx, [edi]
