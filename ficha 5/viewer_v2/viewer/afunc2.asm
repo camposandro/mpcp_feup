@@ -22,8 +22,6 @@ afunc2 PROC pixels: ptr byte, largura: sdword, altura:sdword
 		add edi, 4
 		dec ecx
 	.ENDW
-fim:
-	ret
-
+fim:	ret
 afunc2 ENDP
 END
