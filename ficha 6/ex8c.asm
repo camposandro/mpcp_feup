@@ -43,15 +43,14 @@ main proc c
 	xor eax, eax ;somador para num_ocorr
 	mov esi, offset vector
 
-	;; as minusculas têm ascii entre 97 e 122
+	;; as minusculas tÃªm ascii entre 97 e 122
 	mov edi, vector[97]
 	mov ecx, 26
-@@: add eax, [edi]
+@@: 	add eax, [edi]
 	add edi, 4
 	loop @B
 	
 	invoke linha_cardinais, eax
 	invoke ExitProcess, 0
 main endp
-
 end
