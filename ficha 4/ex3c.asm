@@ -20,13 +20,11 @@ avg PROC seq_ptr: DWORD, nElem: DWORD
 	mov esi, seq_ptr
 	mov ecx, nElem
 	
-ciclo:
-	add ax, sword ptr [esi]
+ciclo:	add ax, sword ptr [esi]
 	add esi, 2
 	loop ciclo
 
 	div nElem
 	ret
 avg ENDP
-
 END
