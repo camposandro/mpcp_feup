@@ -23,13 +23,11 @@ find_min PROC seq_ptr: DWORD, nElem: DWORD
 	
 	mov eax, esi 
 	add esi, 2
-ciclo:
-	mov dx, [eax]
+ciclo:	mov dx, [eax]
 	cmp SWORD PTR [esi], dx
 	jg next
 	mov eax, esi
-next:
-	add esi, 2 
+next:	add esi, 2 
 	loop ciclo
 
 	mov addr_min, eax
@@ -40,8 +38,7 @@ ordena PROC seq_ptr: DWORD, nElem: DWORD
 	mov edi, seq_ptr
 	mov ecx, nElem
 
-ciclo:
-	push edi
+ciclo:	push edi
 	push ecx
 	invoke find_min, edi, ecx
 	pop ecx
@@ -52,5 +49,4 @@ ciclo:
 
 	ret
 ordena ENDP
-
 END
