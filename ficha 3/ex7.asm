@@ -14,8 +14,7 @@ main PROC C
 	mov edi, offset vec2
 	mov ecx, lengthof vec1
 
-ciclo:
-	mov eax, [esi]
+ciclo:	mov eax, [esi]
 	imul SDWORD PTR [edi]
 	jo overflow
 	add somador, eax
@@ -33,9 +32,7 @@ imprimevalor:
 	invoke printf, offset msg, edx
 	jmp fim
 	 
-fim:
-	;invoke_getch
+fim:	;invoke_getch
 	invoke ExitProcess, 0
-
 main ENDP
 end
