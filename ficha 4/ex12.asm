@@ -19,22 +19,19 @@ maxnum PROC seq: ptr dword, n: dword
 	mov esi, seq
 	
 	mov eax, [esi]
-_loop:
-	add esi, 4
+_loop:	add esi, 4
 	cmp [esi], eax
 	jbe _next
 	mov eax, [esi]
-_next:
-	loop _loop
+	
+_next:	loop _loop
 	ret
 maxnum endp
-
 end
 
-
 ;; aquando da invocacao "invoke maxnum, offset sequence, lengthof sequence"
-;; e com sequence = {4,8,11,2,9,7} o estado da pilha é o apresentado a seguir:
+;; e com sequence = {4,8,11,2,9,7} o estado da pilha Ã© o apresentado a seguir:
 ;; -> lengthof sequence (6)
 ;; -> offset sequence
-;; -> endereço de retorno para main
+;; -> endereÃ§o de retorno para main
 ;; -> EBP
