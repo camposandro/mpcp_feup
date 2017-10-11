@@ -17,20 +17,16 @@ minPot2 PROC val: DWORD
 	mov edx, 2
 	mov eax, val
 	
-ciclo:
-	cmp edx, eax
+ciclo:	cmp edx, eax
 	jg _pot2
 	shl edx, 1
 	inc ecx
 	jmp ciclo
 
-_pot2:
-	mov eax, 1
-fim:
-	shl eax, 1
+_pot2:	mov eax, 1
+
+fim:	shl eax, 1
 	loop fim
 	ret
-
 minPot2 ENDP
-
 END
