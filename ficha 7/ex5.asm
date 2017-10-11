@@ -34,7 +34,7 @@ calc_poly_tab PROC tab:PTR REAL8
 	xorpd xmm4, xmm4 ;;incrementa em 0.1 
 	mov ecx, 101 ;;101 elementos
 
-@@: xorpd xmm0, xmm0 ;;somador do poly
+@@: 	xorpd xmm0, xmm0 ;;somador do poly
 
 	;; monomio de x^3
 	mulsd xmm1, xmm4
@@ -51,8 +51,6 @@ calc_poly_tab PROC tab:PTR REAL8
 	addsd xmm4, incremento
 	add esi, type real8
 	loop @B
-
 	ret
 calc_poly_tab endp
-
 end
