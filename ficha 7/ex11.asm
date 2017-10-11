@@ -27,10 +27,9 @@ conta_intervalo PROC pt: ptr real4, n: dword, limA: real4, limB: real4
 	comiss xmm0, limB
 	ja _next
 	inc eax
-_next:
-	add esi, 4
+	
+_next:	add esi, 4
 	loop @B
 	ret
 conta_intervalo endp
-
 end
