@@ -72,5 +72,4 @@ func PROC graus:REAL8, resultado:PTR REAL8
 	movsd real8 ptr [eax], xmm0
 	ret
 func endp
-
 end
