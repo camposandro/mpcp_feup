@@ -20,8 +20,8 @@ primo PROC USES ebx edi esi n: DWORD
 
 	mov ebx, 1
 	mov ecx, 2
-@@:
-	xor edx, edx
+	
+@@:	xor edx, edx
 	mov eax, esi
 	div ecx
 	cmp edx, 0
@@ -32,9 +32,8 @@ primo PROC USES ebx edi esi n: DWORD
 	jmp @B
 nao_primo:
 	mov ebx, 0
-_ret:
-	mov eax, ebx
+	
+_ret:	mov eax, ebx
 	ret
 primo endp
-
 end
