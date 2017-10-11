@@ -17,8 +17,7 @@ main PROC C
 	; ------------------------------------------
 
 	inc DX ; necessario devido a primeira inc
-CICLO:
-	cmp DX, 0
+CICLO:	cmp DX, 0
 	je FIM
 	add esi, 4
 	dec DX
@@ -35,17 +34,8 @@ CONTIDO:
 	inc ecx
 	jmp CICLO
 
-FIM:
-	invoke printf, offset msg, ecx
+FIM:	invoke printf, offset msg, ecx
 	; invoke_getch
 	invoke ExitProcess, 0
-
-
-
-
-	
-
-
-
 main ENDP
 end
