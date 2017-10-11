@@ -6,7 +6,6 @@ msg SBYTE "Somador: %d", 13, 10, 0
 
 .code
 main PROC C
-	;; escrever codigo (parte principal)
 	mov edi, offset seq
 	mov ecx, LENGTHOF seq
 	xor eax, eax
