@@ -15,17 +15,17 @@ main PROC C
 	;; originara um valor em que o numero dos seus bits a zero correspondera ao numero
 	;; de bits em comum para cada posicao
 
-		xor ebx, ecx ;; agora testar para ebx
+	xor ebx, ecx ;; agora testar para ebx
 CICLO:	cmp edx, 0
-		je FIM
-		dec edx
-		shr ebx, 1
-		jc CICLO
-		inc eax
-		jmp CICLO
+	je FIM
+	dec edx
+	shr ebx, 1
+	jc CICLO
+	inc eax
+	jmp CICLO
 FIM:	invoke printf, offset msg, eax
-		;invoke_getch
-		invoke ExitProcess, 0
+	;invoke_getch
+	invoke ExitProcess, 0
 main ENDP
 
 End
