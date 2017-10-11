@@ -25,5 +25,4 @@ main proc c
 	invoke printf, offset msg, result
 	invoke ExitProcess, 0
 main endp
-
 end
