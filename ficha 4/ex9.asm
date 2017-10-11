@@ -12,6 +12,7 @@ main proc c
 	call rotina
 	invoke _getch
 	invoke ExitProcess, 0
+main endp
 
 rotina proc
 	invoke func1 , offset val , lengthof val
@@ -31,8 +32,7 @@ ciclo:
 	add ebx, eax
 	inc esi
 	loop ciclo
-fim:
-	mov eax, ebx
+fim:	mov eax, ebx
 	ret
 func1 endp
 
@@ -42,11 +42,7 @@ func2 proc arg1 : dword
 	jz @F
 	mov eax, 0
 	jmp fim
-@@:
-	mov eax, arg1
-fim:
-	ret
+@@:	mov eax, arg1
+fim:	ret
 func2 endp
-
-main endp
 END
