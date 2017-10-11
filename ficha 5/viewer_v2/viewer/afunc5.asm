@@ -39,5 +39,4 @@ afunc5 PROC pixels: ptr byte, largura: sdword, altura:sdword
 	.ENDW
 	ret
 afunc5 ENDP
-
 END
