@@ -35,5 +35,4 @@ poly2 PROC coefs: PTR SWORD, x: SWORD
 	mov ax, bx 
 	ret
 poly2 ENDP
-
 END
