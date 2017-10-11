@@ -46,5 +46,4 @@ cosseno PROC x:REAL8, resultado:PTR REAL8
 	movsd real8 ptr [eax], xmm6
 	ret
 cosseno endp
-
 end
