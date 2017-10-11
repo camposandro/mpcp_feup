@@ -9,7 +9,7 @@
 afunc1 PROC USES edi ebx pixels: ptr byte, largura: dword, altura:dword
 	mov	eax,largura
 	mul	altura		
-	jc fim			
+	jc 	fim			
 	mov	ecx, eax
 
 	mov	edi, pixels
@@ -18,9 +18,6 @@ afunc1 PROC USES edi ebx pixels: ptr byte, largura: dword, altura:dword
 		add edi, 4
 		dec ecx
 	.ENDW
-fim:
-	ret
-
+fim:	ret
 afunc1 ENDP
-
 END
