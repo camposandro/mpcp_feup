@@ -42,8 +42,7 @@ somaMat proc matrizA: ptr word, matrizB: ptr word, matrizSum: ptr word, N: dword
 	add ebx, 2
 	add edi, 2
 	loop @B
-fim:
-	ret
+	
+fim:	ret
 somaMat endp
-
 end
