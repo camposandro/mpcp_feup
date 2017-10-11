@@ -33,8 +33,6 @@ afunc3 PROC pixels: ptr byte, largura: sdword, altura:sdword
 		pop ecx
 		dec ecx
 	.ENDW
-fim:
-	ret
-
+fim:	ret
 afunc3 ENDP
 END
