@@ -22,12 +22,10 @@ find_max PROC seq_ptr: DWORD, nElem: DWORD
 
 	mov ax, [esi]
 	add esi, 2
-ciclo:
-	cmp SWORD PTR [esi], ax
+ciclo:	cmp SWORD PTR [esi], ax
 	jng next
 	mov ax, [esi]
-next:
-	add esi, 2 
+next:	add esi, 2 
 	loop ciclo
 	ret
 find_max ENDP
