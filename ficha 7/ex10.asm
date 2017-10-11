@@ -26,7 +26,7 @@ erfpos proc argX: real8, res: ptr real8
 	addsd xmm1, xmm2
 	movsd xmm2, argX
 	mov ecx, 3
-@@: mulsd xmm2, xmm2	
+@@: 	mulsd xmm2, xmm2	
 	loop @B
 	mulsd xmm2, a3
 	addsd xmm1, xmm2
@@ -38,7 +38,7 @@ erfpos proc argX: real8, res: ptr real8
 	addsd xmm1, xmm2
 	
 	mov ecx, 4
-@@: mulsd xmm1, xmm1
+@@: 	mulsd xmm1, xmm1
 	loop @B
 
 	cvtsi2sd xmm4, ebx
