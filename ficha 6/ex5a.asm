@@ -8,7 +8,7 @@ exit_code byte 13, 10, "%d (0 = SUCESSO)", 13, 10, 0
 esq proc nchar: dword
 	;; para manter os da esquerda, deslocar
 	;; o 0, que representa o fim da seq, para 
-	;; o char no endereço offset texto+nchar
+	;; o char no endereÃ§o offset texto+nchar
 	 
 	mov esi, offset text
 	add esi, nchar
@@ -20,8 +20,7 @@ esq proc nchar: dword
 	jmp _end
 return_0:
 	mov eax, 0
-_end:
-	ret
+_end:	ret
 esq endp
 
 main proc c
@@ -32,5 +31,4 @@ main proc c
 	invoke printf, offset exit_code, eax
 	invoke ExitProcess, 0
 main endp
-
 end
