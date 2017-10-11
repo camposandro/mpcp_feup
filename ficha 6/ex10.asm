@@ -37,5 +37,4 @@ detect_max proc conjunto: ptr byte, texto: ptr byte
 	.ENDW
 	ret
 detect_max endp
-
 end
