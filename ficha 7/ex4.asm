@@ -27,5 +27,4 @@ dist PROC x:REAL8, y:REAL8, ptrD:PTR REAL8
 	movsd distancia, xmm0
 	ret 
 dist endp
-
 end
