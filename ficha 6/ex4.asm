@@ -11,16 +11,15 @@ lcase proc buffer: ptr byte, nchars: byte
 	mov edi, esi 
 	
 	cld
-@@:	
-	lodsb
+@@:	lodsb
 	cmp al, 65
 	jb next
 	cmp al, 90
 	ja next
 	add al, 32
 	stosb
-next:
-	mov edi, esi
+	
+next:	mov edi, esi
 	loop @B 
 	ret
 lcase endp
@@ -30,5 +29,4 @@ main proc c
 	invoke printf, offset texto
 	invoke ExitProcess, 0
 main endp
-
 end
