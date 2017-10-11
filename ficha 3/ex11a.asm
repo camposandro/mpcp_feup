@@ -6,13 +6,11 @@ msg BYTE "valor medio: %d",10,13,0
 
 .code
 main PROC C
+	mov ecx, lengthof seq
+	mov esi, offset seq
+	xor eax, eax
 
-mov ecx, lengthof seq
-mov esi, offset seq
-xor eax, eax
-
-next: 
-	mov edx, [esi]
+next: 	mov edx, [esi]
 	add eax, edx
 	add esi, 4
 	loop next
@@ -24,10 +22,8 @@ next:
 	jng fim
 	inc eax
 
-fim: 
-	invoke printf, offset msg, eax
+fim: 	invoke printf, offset msg, eax
 	invoke _getch
 	invoke	ExitProcess, 0
-
 main ENDP
 end
