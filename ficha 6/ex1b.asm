@@ -11,11 +11,11 @@ rot_b PROC USES edi vect : PTR BYTE , n: BYTE
 	mov cl , n
 	xor ebx , ebx
 	movzx ecx , cl
-@@: repnz scasb
+@@: 	repnz scasb
 	jnz @F
 	inc ebx
 	jmp @B
-@@: mov eax , ebx
+@@: 	mov eax , ebx
 	ret
 rot_b ENDP
 
@@ -24,5 +24,4 @@ main proc c
 	invoke printf, offset msg, eax
 	invoke ExitProcess, 0
 main endp
-
 end
