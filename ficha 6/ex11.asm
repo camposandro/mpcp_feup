@@ -4,7 +4,7 @@ num_frases proto buf: ptr byte
 num_palavras proto buf: ptr byte, n: byte
 
 .data
-texto byte "Este e um texto exemplo.Obrigado pela leitura.AtÈ mais.", 0
+texto byte "Este e um texto exemplo.Obrigado pela leitura.At√© mais.", 0
 msg1 byte "Numero de frases = %d", 13, 10, 0
 msg2 byte "Numero de palavras na frase %d = %d", 13, 10, 0
 posfrase byte 2
@@ -16,7 +16,7 @@ main proc c
 
 	.IF (ebx > eax)
 		invoke printf, offset msg1, eax
-		xor eax, eax ;; frase n„o existe
+		xor eax, eax ;; frase n√£o existe
 		invoke printf, offset msg2, posfrase, eax
 	.ELSE
 		invoke printf, offset msg1, eax
@@ -64,5 +64,4 @@ num_palavras proc buf: ptr byte, n: byte
 	inc eax
 	ret
 num_palavras endp
-
 end
