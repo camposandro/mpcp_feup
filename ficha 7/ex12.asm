@@ -56,7 +56,7 @@ _continua:
 	add edi, 8
 	loop @B
 
-	;; calculo da interpolação linear
+	;; calculo da interpolaÃ§Ã£o linear
 	movsd xmm0, rightV_limit
 	subsd xmm0, leftV_limit
 	movsd xmm1, rightT_limit
@@ -74,8 +74,6 @@ _returnSeqV:
 	movsd xmm1, real8 ptr [edi] ;; velocidade
 	movsd real8 ptr [eax], xmm1
 
-_ret:
-	ret
+_ret:	ret
 interpol endp
-
 end
